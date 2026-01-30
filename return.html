@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Return Book</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #1cc88a, #4e73df);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: #ffffff;
+            width: 420px;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #777;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        form input:focus {
+            outline: none;
+            border-color: #1cc88a;
+            box-shadow: 0 0 5px rgba(28, 200, 138, 0.5);
+        }
+
+        button {
+            width: 100%;
+            background: #1cc88a;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 12px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #17a673;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Return Book</h1>
+        <h2>Hello, Welcome Again</h2>
+
+        <form>
+            <label>Book ID</label>
+            <input type="text" placeholder="Enter Book ID" required>
+
+            <label>Book Name</label>
+            <input type="text" placeholder="Enter Book Name" required>
+
+            <label>Member ID</label>
+            <input type="text" placeholder="Enter Member ID" required>
+
+            <label>Member Name</label>
+            <input type="text" placeholder="Enter Member Name" required>
+
+            <label>Return Date</label>
+            <input type="date" required>
+
+            <button type="submit">Return Book</button>
+        </form>
+    </div>
+
+</body>
+</html>

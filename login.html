@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Library Management System - Login</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #331967, #1e293b);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .container {
+            background: rgb(255, 255, 255);
+            width: 380px;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .home-link {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .home-link a {
+            text-decoration: none;
+            color: #4e73df;
+            font-weight: bold;
+        }
+
+        .home-link a:hover {
+            text-decoration: underline;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        form input:focus {
+            outline: none;
+            border-color: #4e73df;
+            box-shadow: 0 0 5px rgba(78, 115, 223, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4e73df;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #2e59d9;
+        }
+
+        .forgot {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .forgot a {
+            text-decoration: none;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .forgot a:hover {
+            color: #4e73df;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="home-link">
+            Go to the <a href="index.html">Home page</a>
+        </div>
+
+        <h1>Login Form</h1>
+        <h2>Hello, Welcome Again</h2>
+
+        <form>
+            <label>Username</label>
+            <input type="text" placeholder="Enter the Username" required>
+
+            <label>Password</label>
+            <input type="password" maxlength="8" placeholder="Enter the Password" required>
+
+            <button type="submit">Login</button>
+
+            <div class="forgot">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

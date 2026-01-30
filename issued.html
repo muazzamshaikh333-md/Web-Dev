@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Issue Book</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #4e73df, #1cc88a);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: #ffffff;
+            width: 420px;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #777;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        form input:focus {
+            outline: none;
+            border-color: #4e73df;
+            box-shadow: 0 0 5px rgba(78, 115, 223, 0.5);
+        }
+
+        input[type="submit"] {
+            background: #4e73df;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 12px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #2e59d9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Issue Book</h1>
+        <h2>Library Management System</h2>
+
+        <form>
+            <label>Student Name</label>
+            <input type="text" required>
+
+            <label>Student ID</label>
+            <input type="text" required>
+
+            <label>Book ID</label>
+            <input type="text" required>
+
+            <label>Book Title</label>
+            <input type="text" required>
+
+            <label>Issue Date</label>
+            <input type="date" required>
+
+            <label>Return Date</label>
+            <input type="date" required>
+
+            <input type="submit" value="Issue Book">
+        </form>
+    </div>
+
+</body>
+</html>
