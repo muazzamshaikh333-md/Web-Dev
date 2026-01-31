@@ -6,35 +6,48 @@
     <title>Library Management System - Login</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         body {
             margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #331967, #1e293b);
             height: 100vh;
+            background: linear-gradient(135deg, #4f46e5, #0f172a);
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #333;
         }
 
         .container {
-            background: rgb(255, 255, 255);
-            width: 380px;
-            padding: 30px 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            width: 400px;
+            padding: 35px 40px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+            color: #fff;
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         h1 {
             text-align: center;
             margin-bottom: 5px;
+            font-size: 28px;
         }
 
         h2 {
             text-align: center;
-            font-size: 16px;
-            color: #777;
+            font-size: 15px;
+            font-weight: normal;
+            color: #e5e7eb;
             margin-bottom: 25px;
         }
 
@@ -44,65 +57,92 @@
         }
 
         .home-link a {
+            color: #c7d2fe;
             text-decoration: none;
-            color: #4e73df;
-            font-weight: bold;
+            font-weight: 600;
         }
 
         .home-link a:hover {
             text-decoration: underline;
         }
 
-        form label {
-            display: block;
-            margin-bottom: 6px;
-            font-weight: bold;
+        .field {
+            position: relative;
+            margin-bottom: 22px;
         }
 
-        form input {
+        .field input {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
+            padding: 12px 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            font-size: 15px;
+            outline: none;
         }
 
-        form input:focus {
-            outline: none;
-            border-color: #4e73df;
-            box-shadow: 0 0 5px rgba(78, 115, 223, 0.5);
+        .field input::placeholder {
+            color: transparent;
+        }
+
+        .field label {
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            color: #cbd5f5;
+            font-size: 14px;
+            transform: translateY(-50%);
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .field input:focus + label,
+        .field input:not(:placeholder-shown) + label {
+            top: -8px;
+            font-size: 12px;
+            background: #4f46e5;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .field input:focus {
+            border-color: #c7d2fe;
+            box-shadow: 0 0 8px rgba(199,210,254,0.6);
         }
 
         button {
             width: 100%;
-            padding: 12px;
-            background: #4e73df;
-            color: white;
+            padding: 13px;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
-            transition: background 0.3s;
+            color: #fff;
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         button:hover {
-            background: #2e59d9;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(99,102,241,0.6);
         }
 
         .forgot {
             text-align: center;
-            margin-top: 15px;
+            margin-top: 18px;
         }
 
         .forgot a {
+            color: #cbd5f5;
             text-decoration: none;
-            color: #888;
             font-size: 14px;
         }
 
         .forgot a:hover {
-            color: #4e73df;
+            color: #fff;
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -114,15 +154,19 @@
             Go to the <a href="index.html">Home page</a>
         </div>
 
-        <h1>Login Form</h1>
-        <h2>Hello, Welcome Again</h2>
+        <h1>Welcome Back</h1>
+        <h2>Login to Library Management System</h2>
 
         <form>
-            <label>Username</label>
-            <input type="text" placeholder="Enter the Username" required>
+            <div class="field">
+                <input type="text" required placeholder="Username">
+                <label>Username</label>
+            </div>
 
-            <label>Password</label>
-            <input type="password" maxlength="8" placeholder="Enter the Password" required>
+            <div class="field">
+                <input type="password" maxlength="8" required placeholder="Password">
+                <label>Password</label>
+            </div>
 
             <button type="submit">Login</button>
 
