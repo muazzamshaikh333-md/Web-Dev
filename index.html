@@ -2,60 +2,107 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Management System</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.html">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header / Navigation -->
-    <header class="main-header">
-        <div class="container">
-            <h1> Library Management</h1>
-            <nav>
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="login.html" class="nav-link">Login</a>
-                <a href="issue.html" class="nav-link">Issue Book</a>
-                <a href="return.html" class="nav-link">Return Book</a>
-            </nav>
-        </div>
-    </header>
+<!-- ===== NAVBAR ===== -->
+<header>
+    <div class="navbar">
+        <h1>Library Management System</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="issued.html">Issued Book</a></li>
+            <li><a href="return.html">Return Book</a></li>
+        </ul>
+    </div>
+</header>
 
-    <!-- Hero Search Section -->
-    <section class="hero">
-        <div class="container search-box">
-            <h2>Find Books, Articles & Resources</h2>
-            <form>
-                <input type="text" placeholder="Search for books, authors, subjects...">
-                <button type="submit">Search</button>
-            </form>
-        </div>
-    </section>
+<!-- ===== HERO SECTION ===== -->
+<section class="hero">
+    <h2>Find Books, Articles & Resources</h2>
+    <p>
+        A smart and easy-to-use library management system that helps students
+        and staff search, issue, and return books efficiently.
+    </p>
 
-    <!-- Featured Resources -->
-    <section class="resources container">
-        <h3>Featured Resources</h3>
-        <div class="card-grid">
-            <div class="card">
-                <h4>Introduction to Programming</h4>
-                <p>Author: John Doe</p>
-            </div>
-            <div class="card">
-                <h4>Advanced Mathematics</h4>
-                <p>Author: Jane Smith</p>
-            </div>
-            <div class="card">
-                <h4>History of India</h4>
-                <p>Author: A. Historian</p>
-            </div>
-        </div>
-    </section>
+    <div class="search-box">
+        <input type="text" placeholder="Search books, authors, subjects...">
+        <button>View</button>
+        <a href="https://www.google.com/"
+           target="_blank"
+           class="book-link">
+        </a>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-        <p>©  Library Management System</p>
-    </footer>
+    </div>
+</section>
 
-</body>
-</html>
+<section class="stats">
+    <div class="stat-card">
+        <h3>5,000+</h3>
+        <p>Books Available</p>
+        <br>
+        <br>
+        <p>“The library has a rich collection of over 5,000 books covering a wide range of subjects and interests. It serves as a valuable resource for students and readers, supporting learning, research, and overall knowledge development.”</p>
+    </div>
+    <div class="stat-card">
+        <h3>1,200+</h3>
+        <p>Registered Users</p>
+        <br>
+        <br>
+        <p>“The library has a growing community of over 1,200 registered members who actively use its resources for learning, research, and reading. With a well-maintained collection and accessible services, the library continues to support the academic and intellectual needs of its users.”</p>
+    </div>
+    <div class="stat-card">
+        <h3>300+</h3>
+        <p>Daily Visitors</p>
+        <br>
+        <br
+
+   <p>“The library has a growing community of over 1,200 registered members and welcomes more than 300 visitors daily. With a rich collection of over 5,000 books, the library serves as a vibrant hub for learning, research, and knowledge sharing.”</p>    
+</div>
+    
+
+<section class="books">
+    <div class="book-card">
+        <h4>Wings of Fire</h4>
+        <p><strong>Author:</strong> A.P.J. Abdul Kalam</p>
+        <p>Autobiography of Dr. A.P.J. Abdul Kalam, former President of India.</p>
+
+        <a href="https://ati.dae.gov.in/ati12052021_8.pdf"
+           target="_blank"
+           class="book-link">
+           View Book
+        </a>
+    </div>
+
+    <div class="book-card">
+        <h4>Harry Potter</h4>
+        <p><strong>Author:</strong> J.K. Rowling</p>
+        <p>A magical journey through the world of wizardry and adventure.</p>
+
+        <a href="https://en.wikipedia.org/wiki/Harry_Potter"
+           target="_blank"
+           class="book-link">
+           View Book
+        </a>
+    </div>
+
+    <div class="book-card">
+        <h4>Open Book shelf</h4>
+        <p>If you want to search any of the book Click on View Book</p>
+
+        <a href="https://ndl.iitkgp.ac.in/"
+           target="_blank"
+           class="book-link">
+           View Book
+        </a>
+    </div>
+</section>
+
+
