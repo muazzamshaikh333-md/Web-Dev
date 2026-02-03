@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #0f2027, #000);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.orb {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    filter: blur(120px);
+    z-index: -1;
+}
+.orb1 {
+    background: #00f2ff;
+    top: 10%;
+    left: 5%;
+}
+.orb2 {
+    background: #ff4ecd;
+    bottom: 15%;
+    right: 5%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+.logo span {
+    color: #00f2ff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #cccccc;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #00f2ff;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.hero span {
+    background: linear-gradient(90deg, #00f2ff, #ff4ecd);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 20px 0;
+    color: #aaaaaa;
+}
+
+.btn {
+    width: fit-content;
+    padding: 12px 30px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #00f2ff, #ff4ecd);
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    border-radius: 20px;
+    margin: 60px 10%;
+    padding: 40px;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#education {
+    padding: 60px 10%;
+}
+
+.edu-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 15px;
+}
+.edu-card span {
+    color: #00f2ff;
+}
+
+#skills {
+    padding: 60px 10%;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    transition: 0.4s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: linear-gradient(135deg, #00f2ff, #ff4ecd);
+    color: #000;
+}
+
+.projects {
+    display: grid;
+    gap: 25px;
+}
+
+.project {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-left: 4px solid #00f2ff;
+    border-radius: 10px;
+}
+
+#contact {
+    padding: 60px 10%;
+}
+#contact span {
+    color: #00f2ff;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #888888;
+}
