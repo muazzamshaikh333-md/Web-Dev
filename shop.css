@@ -1,0 +1,74 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Container */
+.shop-container {
+    width: 85%;
+    max-width: 1000px;
+    margin: 50px auto;
+    background: #ffffff;
+    text-align: center;
+    padding-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* Title Section - Professional Matching Theme */
+.shop-title {
+    background: linear-gradient(90deg, #1f3c88, #3b5998);
+    color: #ffffff;
+    padding: 30px 0;
+    margin: 0;
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Services Section */
+.services {
+    margin: 40px 0;
+}
+
+.services ul {
+    display: inline-block;
+    text-align: left;
+    margin: 15px 40px;
+    padding: 0;
+    list-style: none;
+}
+
+.services li {
+    padding: 10px 0;
+    font-size: 19px;
+    font-weight: 600;
+    color: #333;
+    transition: 0.3s ease;
+}
+
+.services li::before {
+    content: "◆ ";
+    color: #1f3c88;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.services li:hover {
+    color: #1f3c88;
+    transform: translateX(6px);
+}
+
+/* Contact Section */
+.contact {
+    background: #1f3c88;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
