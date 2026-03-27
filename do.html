@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List</title>
+
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #0f2027, #000);
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+  }
+  
+  .container {
+    background: #e2e1f27e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 50px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  input {
+    width: 70%;
+    padding: 8px;
+  }
+  
+  button {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  </style>
+
+</head>
+<body>
+
+<div class="container">
+  <h2>To-Do List</h2>
+  
+  <input type="text" id="taskinput" placeholder="Enter task">
+  <button id="addbtn">Add</button>
+
+  <ul id="taskList"></ul>
+  
+</div>
+<script>
+  let addbtn = document.getElementById("addbtn");
+  let taskinput = document.getElementById("taskinput");
+  let taskList = document.getElementById("taskList");
+
+  addbtn.addEventListener("click", function () {
+
+  
+    let taskText = taskinput.value;
+
+  
+    let li = document.createElement("li");
+
+    
+    li.textContent = taskText;
+
+    
+    taskList.appendChild(li);
+
+   
+    taskinput.value = "";
+  });
+</script>
+</body>
+</html>
