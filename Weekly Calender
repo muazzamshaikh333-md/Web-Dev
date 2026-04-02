@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Weekly Calendar</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background: #f4f6f9;
+  padding: 20px;
+}
+
+.sidebar h3 {
+  margin-bottom: 20px;
+}
+
+.sidebar p {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.calendar {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 80px repeat(7, 1fr);
+  border: 1px solid #ccc;
+}
+
+.day {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  background: #f9f9f9;
+}
+
+.time {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.cell {
+  border: 1px solid #eee;
+  height: 60px;
+  position: relative;
+  cursor: pointer;
+}
+
+.event {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  background: #ffb3b3;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="sidebar">
+  <h3>Shaikh Md.Muazzam
+  <p>Dashboard</p>
+  <p><b>My Calendar</b></p>
+  <p>My Notes</p>
+  <p>Teams</p>
+</div>
+
+<div class="main">
+
+  <div class="header">
+    <h2>My Calendar</h2>
+    <button onclick="addEvent()">+ Create</button>
+  </div>
+
+  <div class="calendar" id="calendar">
+
+    <div></div>
+    <div class="day">Sun</div>
+    <div class="day">Mon</div>
+    <div class="day">Tue</div>
+    <div class="day">Wed</div>
+    <div class="day">Thu</div>
+    <div class="day">Fri</div>
+    <div class="day">Sat</div>
+
+  </div>
+
+</div>
+
+<script>
+const calendar = document.getElementById("calendar");
+
+for (let i = 7; i <= 15; i++) {
+
+  let time = document.createElement("div");
+  time.className = "time";
+  time.textContent = i + ":00";
+  calendar.appendChild(time);
+
+  for (let j = 0; j < 7; j++) {
+    let cell = document.createElement("div");
+    cell.className = "cell";
+
+    cell.addEventListener("click", function () {
+      let title = prompt("Event name:");
+      if (!title) return;
+
+      let event = document.createElement("div");
+      event.className = "event";
+      event.textContent = title;
+
+      cell.appendChild(event);
+    });
+
+    calendar.appendChild(cell);
+  }
+}
+
+function addEvent() {
+  alert("Click any cell to add event");
+}
+</script>
+
+</body>
+</html>
