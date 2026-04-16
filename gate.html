@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GATE Registration Form</title>
+    <link rel="stylesheet" href="gate.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h2>GATE Registration Form</h2>
+
+    <form id="gateForm">
+        
+        <label>Full Name:</label>
+        <input type="text" id="name">
+        <div id="nameError" class="error"></div>
+
+        <label>Email:</label>
+        <input type="text" id="email">
+        <div id="emailError" class="error"></div>
+
+        <label>Phone Number:</label>
+        <input type="text" id="phone">
+        <div id="phoneError" class="error"></div>
+
+        <label>Password:</label>
+        <input type="password" id="password">
+        <div id="passwordError" class="error"></div>
+
+        <label>Confirm Password:</label>
+        <input type="password" id="confirmPassword">
+        <div id="confirmError" class="error"></div>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+<script src="gate.js"></script>
+
+</body>
+</html>
